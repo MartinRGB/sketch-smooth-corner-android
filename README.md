@@ -16,4 +16,4 @@ A android project explained how to draw Sketch's smooth corner in android canvas
 
 ## Web Live Demo
 
-[web live demo](https://github.com/MartinRGB/sketch-smooth-corner-web)
+[web live demo](http://www.martinrgb.com/sketch-smooth-corner-web)
