@@ -3,7 +3,7 @@
 A android project explained how to draw Sketch's smooth corner in android canvas
 
 * High Performance
-* Live Corners
+* Dynamic Corners
 
 ## GIFS
 
