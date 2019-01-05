@@ -1,0 +1,164 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="TransparentListView" parent="@android:style/Widget.ListView">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+
+    <style name="TransparentExpandableListView" parent="@android:style/Widget.ExpandableListView">
+        <item name="android:cacheColorHint">@android:color/transparent</item>
+    </style>
+
+    <style name="ActivityStyle" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">#FAF9F6</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="CanvasStyle" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:alpha">0.9</item>
+    </style>
+
+    <style name="MainButton" >
+        <item name="android:background">@drawable/transparent_bg_button_selector</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:layout_width">240dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <!--<item name="android:paddingTop">14dp</item>-->
+        <!--<item name="android:paddingBottom">14dp</item>-->
+        <item name="android:paddingLeft">42dp</item>
+        <item name="android:paddingRight">42dp</item>
+    </style>
+
+    <style name="AnnotationMainLayout">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="AnnotationSubLayout">
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+    <style name="AnnotationColorView" >
+        <item name="android:layout_width">12dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
+
+    <style name="AnnotationText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:lineSpacingMultiplier">1.65</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">24dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:textColor">@color/appBlack</item>
+    </style>
+
+    <style name="CustomSwitch">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:checked">true</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:track">@drawable/switch_custom_track_selector</item>
+        <item name="android:thumb">@drawable/switch_custom_thumb_selector</item>
+    </style>
+
+    <style name="CustomControlLayout" >
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:orientation">vertical</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:paddingTop">10dp</item>
+    </style>
+
+    <style name="CustomCheckBoxLayout" >
+        <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="CustomSeekbar" >
+        <item name="android:maxHeight">6dp</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">@color/appDarkBlue</item>
+        <item name="android:progressDrawable">@drawable/seekbar_progress_drawable</item>
+        <item name="android:thumbTint">@color/appDark</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">4dp</item>
+    </style>
+
+
+    <style name="MainCheckbox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <!--<item name="android:layout_marginLeft">8dp</item>-->
+        <!--<item name="android:layout_marginRight">8dp</item>-->
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:checked">true</item>
+        <item name="android:buttonTint">@color/appRed</item>
+    </style>
+
+    <style name="AlertNativeCheckbox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">12dp</item>
+        <!--<item name="android:layout_marginLeft">8dp</item>-->
+        <!--<item name="android:layout_marginRight">4dp</item>-->
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginBottom">6dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:checked">true</item>
+        <item name="android:buttonTint">@color/appRed</item>
+    </style>
+
+    <style name="SeekbarText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="android:textSize">12dp</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textColor">@color/appBlack</item>
+    </style>
+
+</resources>

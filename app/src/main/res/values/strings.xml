@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Round Corners</string>
+    <string name="radius_text">Radius: </string>
+    <string name="height_text">Height: </string>
+    <string name="width_text">Width: </string>
+    <string name="annotation_alertnative">QuadRoundCorners - drawPath(RQuadTo)</string>
+    <string name="annotation_android">AndroidRoundCorners - drawRoundRect</string>
+    <string name="annotation_sketch">SketchRoundCorners - drawPath(RCubicTo)</string>
+
+    <string name="annotation_sketch_smooth_1">SquircleSmoothCorners</string>
+    <string name="annotation_sketch_smooth_2">SuperellipseSmoothCorners</string>
+    <string name="annotation_sketch_smooth_3">RealSketchSmoothCorner</string>
+
+    <string name="annotation_conclusion_1">Conclusion：[XML | drawRoundRect] method -> \'Round Corners\' in Sketch</string>
+    <string name="annotation_conclusion_2">Conclusion：[Cubic Bezier] method -> \'Smooth Corners\' in sketch</string>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/ActivityStyle"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:src="@drawable/hero"
+        android:scaleType="fitXY" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:paddingTop="30dp"
+        android:paddingBottom="30dp">
+
+
+        <Button
+            style="@style/MainButton"
+            android:onClick="transitionToRound"
+            android:text="Sketch Round Corners" />
+
+        <Button
+            style="@style/MainButton"
+            android:onClick="transitionToSquircle"
+            android:text="Squircle Corners" />
+
+        <Button
+            style="@style/MainButton"
+            android:onClick="transitionToSuperellipse"
+            android:text="Superellipse Corners" />
+
+        <Button
+            style="@style/MainButton"
+            android:onClick="transitionToSmooth"
+            android:text="Sketch Smooth Corners" />
+
+        <Button
+            style="@style/MainButton"
+            android:onClick="transitionToAnimation"
+            android:text="Animation Demo" />
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
