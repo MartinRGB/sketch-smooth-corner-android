@@ -56,23 +56,23 @@
                 <CheckBox
                     style="@style/MainCheckbox"
                     android:id="@+id/tl_check"
-                    android:text="左上"/>
+                    android:text="tl"/>
                 <CheckBox
                     style="@style/MainCheckbox"
                     android:id="@+id/tr_check"
-                    android:text="右上"/>
+                    android:text="tr"/>
                 <CheckBox
                     style="@style/MainCheckbox"
                     android:id="@+id/bl_check"
-                    android:text="左下"/>
+                    android:text="bl"/>
                 <CheckBox
                     style="@style/MainCheckbox"
                     android:id="@+id/br_check"
-                    android:text="右下"/>
+                    android:text="br"/>
                 <CheckBox
                     style="@style/AlertNativeCheckbox"
                     android:id="@+id/ratio_check"
-                    android:text="等比"/>
+                    android:text="isSquare"/>
             </LinearLayout>
             <LinearLayout
                 android:orientation="vertical"
