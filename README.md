@@ -1,6 +1,6 @@
 # sketch-smooth-corner-android
 
-An android project explained how to draw Sketch's smooth corner in android canvas.
+An android project explained how to draw Sketch's smooth corner in **Android Canvas**.
 
 You can customize drawing function in your custom view n' achieve cool animation effect.
 
