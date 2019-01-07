@@ -7,7 +7,7 @@ An android project explained how to draw Sketch's smooth corner in android canva
 
 ## Parameter comparison
 
-If the round radius is bigger than ninety percent of the shortest edge ,there will be tiny difference between real value in *Sketch* and the output value in *Andoird*:
+If the round radius is bigger than 90% of the shortest edge ,there will be tiny difference between real value in *Sketch* and the output value in *Andoird* (But in that case,I would use *Round Corners*)
 
 ![parameters](https://github.com/MartinRGB/sketch-smooth-corner-android/blob/master/art/compare.jpg?raw=true)
 
