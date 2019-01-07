@@ -4,7 +4,7 @@ An android project explained how to draw Sketch's smooth corner in android canva
 
 You can customize drawing function in your custom view n' achieve cool animation effect.
 
-Aslo you can try it in this [web demo](http://www.martinrgb.com/sketch-smooth-corner-web) —— compare uploaded image with effect in **Web Canvas**
+Also you can try it in this [web demo](http://www.martinrgb.com/sketch-smooth-corner-web) —— compare uploaded image with effect in **Web Canvas**
 
 ## Parameter comparison
 
