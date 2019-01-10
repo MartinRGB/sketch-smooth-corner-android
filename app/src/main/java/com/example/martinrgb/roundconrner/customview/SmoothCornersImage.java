@@ -6,6 +6,8 @@ import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.Point;
+import android.graphics.PointF;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffXfermode;
 import android.graphics.Rect;
@@ -333,26 +335,39 @@ public class SmoothCornersImage extends AppCompatImageView {
         }
         return minBorder/2;
     }
-    private float getRadiusInMaxRange(float width,float height,float radius){
-        float realRadius = Math.min(radius,getMAXRadius(width,height));
+    private float getRadiusInMaxRange(float width,float height,float radius) {
+        float realRadius = Math.min(radius, getMAXRadius(width, height));
         return realRadius;
     }
-    public float getRectWidth() {
+
+    public PointF getRectSize(){
+        return new PointF(getRectWidth(),getRectWidth());
+    }
+
+    public void setRectSize(float width,float height){
+        setRectWidth(width);
+        setRectHeight(height);
+        requestLayout();
+        //this.invalidate();
+    }
+
+    private float getRectWidth() {
         return WIDTH;
     }
 
-    public void setRectWidth(float WIDTH) {
+    private void setRectWidth(float WIDTH) {
         this.WIDTH = WIDTH;
-        this.invalidate();
+        getLayoutParams().width = (int)WIDTH;
     }
 
-    public float getRectHeight() {
+    private float getRectHeight() {
         return HEIGHT;
     }
 
-    public void setRectHeight(float HEIGHT) {
+    private void setRectHeight(float HEIGHT) {
         this.HEIGHT = HEIGHT;
-        this.invalidate();
+        getLayoutParams().height = (int)HEIGHT;
+
     }
 
     public boolean isSquare() {

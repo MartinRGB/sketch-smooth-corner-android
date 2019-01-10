@@ -4,6 +4,7 @@ import android.graphics.Point;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewTreeObserver;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -18,17 +19,15 @@ public class PrototypeActivity extends AppCompatActivity {
 
     private SmoothCornersImage smoothCornersImage;
 
-    private static final SpringConfig mconfigScale = SpringConfig.fromOrigamiTensionAndFriction(60, 16);
-
+    private static final SpringConfig mconfigScale = SpringConfig.fromOrigamiTensionAndFriction(80, 16);
     private static final SpringConfig mconfigAlpha = SpringConfig.fromOrigamiTensionAndFriction(80, 12);
-
     private static final SpringConfig mconfigNav = SpringConfig.fromOrigamiTensionAndFriction(100, 12);
     private SpringSystem mSpringSystem;
 
     private Spring mSpring,mAlphaSpring,mNavSpring;
     private boolean isShowDetail = false;
 
-    private float initW,initH;
+    private float initW,initH,initR,initTranslationX;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -36,6 +35,19 @@ public class PrototypeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_prototype);
 
         smoothCornersImage = findViewById(R.id.smooth_iv);
+        ViewTreeObserver vto = smoothCornersImage.getViewTreeObserver();
+        vto.addOnGlobalLayoutListener (new ViewTreeObserver.OnGlobalLayoutListener() {
+            @Override
+            public void onGlobalLayout() {
+                smoothCornersImage.getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                initTranslationX = smoothCornersImage.getTranslationX();
+                initW = smoothCornersImage.getMeasuredWidth();
+                initH = smoothCornersImage.getMeasuredHeight();
+                initR = smoothCornersImage.getRoundRadius();
+            }
+        });
+
+
 
 
         getDisplayPoint();
@@ -73,24 +85,18 @@ public class PrototypeActivity extends AppCompatActivity {
             public void onSpringUpdate(Spring mSpring) {
                 float value = (float) mSpring.getCurrentValue();
 
-                float XVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, 0, -19);
+                float XVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, initTranslationX, 0);
                 float YVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, 0, -918);
-                float widthVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, 1005, sWidth);
-                float heightVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, 420, sWidth);
-                float radiusVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, 60, 0);
-                float scaleVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, 1, 1.1);
+                float widthVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, initW, sWidth);
+                float heightVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, initH, sWidth);
+                float radiusVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, initR, 0);
 
                 float reverseHeightVal = (float) SpringUtil.mapValueFromRangeToRange(value, 0, 1, (sWidth - 420)/2, 0);
 
-                smoothCornersImage.setRectWidth(widthVal);
-                smoothCornersImage.setRectHeight(heightVal);
-                smoothCornersImage.getLayoutParams().height = (int)heightVal;
-                smoothCornersImage.getLayoutParams().width = (int)widthVal;
+                smoothCornersImage.setRectSize(widthVal,heightVal);
                 smoothCornersImage.setTranslationX(XVal);
                 smoothCornersImage.setTranslationY(YVal);
                 smoothCornersImage.setRoundRadius(radiusVal);
-                smoothCornersImage.setScaleX(scaleVal);
-                smoothCornersImage.requestLayout();
 
                 findViewById(R.id.smooth_text_iv).setTranslationY(-(heightVal-420)/2);
                 findViewById(R.id.detail_text_iv).setTranslationY(reverseHeightVal);
@@ -123,7 +129,7 @@ public class PrototypeActivity extends AppCompatActivity {
         });
 
         mNavSpring = mSpringSystem.createSpring();
-        mNavSpring.setSpringConfig(mconfigAlpha);
+        mNavSpring.setSpringConfig(mconfigNav);
         mNavSpring.addListener(new SimpleSpringListener() {
 
             @Override

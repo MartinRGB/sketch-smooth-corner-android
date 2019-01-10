@@ -24,25 +24,12 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_marginTop="306dp"
-        android:layout_marginLeft="12dp"
+        android:translationX="36px"
         android:scaleType="fitXY"
         android:src="@drawable/image_default"
         app:smooth_radius="60"
         app:is_square="false"/>
 
-
-    <!--<com.example.martinrgb.roundconrner.customview.SmoothCornersImage-->
-        <!--android:id="@+id/smooth_iv"-->
-        <!--android:layout_width="360dp"-->
-        <!--android:layout_height="360dp"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_marginTop="0dp"-->
-        <!--android:layout_marginLeft="0dp"-->
-        <!--android:scaleType="centerCrop"-->
-        <!--android:src="@drawable/image_default"-->
-        <!--app:smooth_radius="0"-->
-        <!--app:is_square="false"/>-->
 
     <ImageView
         android:id="@+id/smooth_text_iv"
