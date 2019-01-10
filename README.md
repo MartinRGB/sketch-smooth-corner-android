@@ -20,6 +20,7 @@ If the round radius is bigger than **90% of the shortest edge** ,there will be t
 
 ![gif1](https://raw.githubusercontent.com/MartinRGB/sketch-smooth-corner-android/master/art/capture1.gif)
 ![gif2](https://raw.githubusercontent.com/MartinRGB/sketch-smooth-corner-android/master/art/capture2.gif)
+![gif3](https://raw.githubusercontent.com/MartinRGB/sketch-smooth-corner-android/master/art/capture3.gif)
 
 ## Web version
 
