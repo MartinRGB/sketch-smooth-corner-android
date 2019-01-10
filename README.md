@@ -1,5 +1,9 @@
 # sketch-smooth-corner-android
 
+实现 UI 设计师更为喜欢采用的平滑圆角算法，自定义 View | Layout 需提取绘制函数重写绘制方法
+
+------------------------------------------------------------------------------------------------------
+
 An android project explained how to draw Sketch's smooth corner in **Android Canvas**.
 
 You can customize drawing function in your custom view n' achieve cool animation effect.
