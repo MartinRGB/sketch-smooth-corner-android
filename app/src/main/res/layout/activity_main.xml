@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="360dp"
         android:src="@drawable/hero"
-        android:scaleType="fitXY" />
+        android:scaleType="centerCrop" />
 
     <LinearLayout
         android:orientation="vertical"
@@ -17,7 +17,6 @@
         android:layout_height="fill_parent"
         android:paddingTop="30dp"
         android:paddingBottom="30dp">
-
 
         <Button
             style="@style/MainButton"
@@ -39,11 +38,57 @@
             android:onClick="transitionToSmooth"
             android:text="Sketch Smooth Corners" />
 
-        <Button
-            style="@style/MainButton"
-            android:onClick="transitionToAnimation"
-            android:text="Animation Demo" />
+        <!--<Button-->
+            <!--style="@style/MainButton"-->
+            <!--android:onClick="transitionToAnimation"-->
+            <!--android:text="Animation Demo" />-->
 
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <Button
+                android:background="@drawable/transparent_bg_button_selector"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:onClick="transitionToAnimation"
+                android:textSize="12dp"
+                android:text="Animation"
+                />
+
+            <Button
+                android:background="@drawable/transparent_bg_button_selector"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:onClick="transitionToPrototype"
+                android:textSize="12dp"
+                android:text="Proto"
+                />
+
+        </LinearLayout>
+
+        <!--<style name="MainButton" >-->
+            <!--<item name="android:background">@drawable/transparent_bg_button_selector</item>-->
+            <!--<item name="android:textSize">12dp</item>-->
+            <!--<item name="android:layout_width">240dp</item>-->
+            <!--<item name="android:layout_height">0dp</item>-->
+            <!--<item name="android:layout_weight">1</item>-->
+            <!--<item name="android:layout_gravity">center_horizontal</item>-->
+            <!--<item name="android:layout_marginTop">10dp</item>-->
+            <!--<item name="android:layout_marginBottom">10dp</item>-->
+            <!--<item name="android:paddingLeft">42dp</item>-->
+            <!--<item name="android:paddingRight">42dp</item>-->
+        <!--</style>-->
 
 
     </LinearLayout>

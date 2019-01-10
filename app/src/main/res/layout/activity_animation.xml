@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_layout"
     style="@style/ActivityStyle"
-    tools:context=".SmoothActivity">
+    tools:context=".AnimationActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +25,6 @@
         <com.example.martinrgb.roundconrner.smoothcorners.SketchSmoothCorners
             android:id="@+id/sketchsmoothcorners"
             style="@style/CanvasStyle"/>
-
 
     </FrameLayout>
 

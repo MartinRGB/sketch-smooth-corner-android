@@ -21,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
     public void transitionToSuperellipse(View v) {startActivity(new Intent(this, SuperellipseActivity.class));}
     public void transitionToSmooth(View v) {startActivity(new Intent(this, SmoothActivity.class));}
     public void transitionToAnimation(View v) {startActivity(new Intent(this, AnimationActivity.class));}
+    public void transitionToPrototype(View v) {startActivity(new Intent(this, PrototypeActivity.class));}
 
     private void deleteBars(){
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
